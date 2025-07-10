@@ -13,7 +13,7 @@
     header p { font-size: 1.1rem; color: #6a1b9a; margin-top: 8px; }
     .carousel { position: relative; max-width: 500px; margin: 30px auto; border-radius: 15px; overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
     .carousel-item { display: none; position: relative; }
-    .carousel-item img { width: 100%; max-height: 250px; border-radius: 15px; object-fit: contain; }
+    .carousel-item img { width: 100%; max-height: 200px; border-radius: 15px; object-fit: cover; }
     .carousel-item.active { display: block; }
     .caption { position: absolute; bottom: 0; background: rgba(255,255,255,0.8); color: #d81b60; width: 100%; text-align: center; padding: 8px; font-family: 'Pacifico', cursive; font-size: 1rem; }
     .prev, .next { cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); width: auto; padding: 8px; color: #d81b60; font-weight: bold; font-size: 14px; background: rgba(255,255,255,0.6); border-radius: 50%; user-select: none; }
@@ -37,14 +37,10 @@
   </style>
 </head>
 <body>
-  <audio id="bg-music" autoplay loop>
-    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_5f43d3f2f6.mp3?filename=happy-birthday-to-you-piano-3273.mp3" type="audio/mpeg">
+  <audio id="bg-music" controls>
+    <source src="happy-birthday.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
-  <div class="music-controls">
-    <button class="music-btn" onclick="playMusic()">Play Music 🎵</button>
-    <button class="music-btn" onclick="pauseMusic()">Pause Music ⏸️</button>
-  </div>
 
   <header>
     <h1>Happy Birthday Meri Marsha 🎉</h1>
@@ -84,7 +80,7 @@
     Aap mere khayal se kabhi reha nahi hui… Your energy was that strong, bruh. Even surrounded by other friends, I kept thinking about you. I believe it’s because of how your presence made me feel.<br><br>
     I remember how I used to read our old chats… Marsha, I’m grateful to have you back. Ever since we regained contact, you’ve always been there for me. Thank you for that. Thank you for the days when you heard me crying on the call and soothing me. I have a guilt of not being there for you in your bad times.<br><br>
     I wish we could be together to celebrate your day. May Allah bless you with hidayah. May Allah strengthen your imaan. May Allah grant you success in this world and the Hereafter.<br><br>
-    My friend, I’m sorry for everything that happened. And thank you again for understanding me in my hard times. I know it's not easy for you to understand me everytime and say "it's alright", my actions might be hurtful but you always understood me, I appreciate that. It must be difficult for you to let go of things.. This flexibility stands you out.<br><br>
+    My friend, I’m sorry for everything that happened. And thank you again for understanding me in my hard times. I know it's not easy for you to understand me every time and say "it's alright", my actions might be hurtful but you always understood me, I appreciate that. It must be difficult for you to let go things.. This flexibility stands you out.<br><br>
     Again, Happy Birthday Marsha.<br>
     Love you, sis. ❤
   </section>
@@ -116,12 +112,6 @@
       msg.style.display = 'block';
       setTimeout(() => msg.classList.add('show'), 50);
       alert('🎉 Confetti everywhere! Happy Birthday!');
-    }
-    function playMusic() {
-      document.getElementById('bg-music').play();
-    }
-    function pauseMusic() {
-      document.getElementById('bg-music').pause();
     }
   </script>
 </body>

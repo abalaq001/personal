@@ -13,31 +13,31 @@
     header p { font-size: 1.1rem; color: #6a1b9a; margin-top: 10px; }
     .music-btn { background-color: #d81b60; color: #fff; border: none; padding: 10px 20px; font-size: 1rem; border-radius: 25px; cursor: pointer; margin-top: 15px; transition: background 0.3s; }
     .music-btn:hover { background-color: #ad1457; }
-    .carousel { position: relative; max-width: 700px; margin: 40px auto; border-radius: 15px; overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
+    .carousel { position: relative; max-width: 500px; margin: 30px auto; border-radius: 15px; overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
     .carousel-item { display: none; position: relative; }
-    .carousel-item img { width: 100%; border-radius: 15px; }
+    .carousel-item img { width: 100%; height: auto; border-radius: 15px; max-height: 300px; object-fit: cover; }
     .carousel-item.active { display: block; }
-    .caption { position: absolute; bottom: 0; background: rgba(255,255,255,0.8); color: #d81b60; width: 100%; text-align: center; padding: 10px; font-family: 'Pacifico', cursive; font-size: 1.2rem; }
-    .prev, .next { cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); width: auto; padding: 12px; color: #d81b60; font-weight: bold; font-size: 18px; background: rgba(255,255,255,0.6); border-radius: 50%; user-select: none; }
-    .next { right: 15px; }
-    .prev { left: 15px; }
+    .caption { position: absolute; bottom: 0; background: rgba(255,255,255,0.8); color: #d81b60; width: 100%; text-align: center; padding: 8px; font-family: 'Pacifico', cursive; font-size: 1rem; }
+    .prev, .next { cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); width: auto; padding: 10px; color: #d81b60; font-weight: bold; font-size: 16px; background: rgba(255,255,255,0.6); border-radius: 50%; user-select: none; }
+    .next { right: 10px; }
+    .prev { left: 10px; }
     .prev:hover, .next:hover { background: rgba(255,255,255,0.9); }
-    .birthday-message { background: #fff; border-radius: 15px; padding: 20px; margin: 40px auto; text-align: left; font-family: 'Pacifico', cursive; font-size: 1.1rem; color: #d81b60; box-shadow: 0 6px 15px rgba(0,0,0,0.2); max-width: 850px; max-height: 400px; overflow-y: auto; }
+    .birthday-message { background: #fff; border-radius: 15px; padding: 20px; margin: 30px auto; text-align: left; font-family: 'Pacifico', cursive; font-size: 1.1rem; color: #d81b60; box-shadow: 0 6px 15px rgba(0,0,0,0.2); max-width: 850px; max-height: 400px; overflow-y: auto; }
     .surprise { text-align: center; margin: 50px 20px; }
-    .surprise-btn { background-color: #d81b60; color: #fff; border: none; padding: 15px 30px; font-size: 1.2rem; border-radius: 30px; cursor: pointer; transition: background 0.3s; margin-top: 10px; }
+    .surprise-btn { background-color: #d81b60; color: #fff; border: none; padding: 12px 25px; font-size: 1.1rem; border-radius: 25px; cursor: pointer; transition: background 0.3s; margin-top: 10px; }
     .surprise-btn:hover { background-color: #ad1457; }
-    #gift-box { width: 120px; height: 120px; margin: 20px auto; background: url('giftbox.jpg') no-repeat center center; background-size: cover; animation: bounce 2s infinite; }
-    #surprise-message { display: none; margin-top: 20px; background: #fff; border-radius: 15px; padding: 20px; max-height: 250px; overflow-y: auto; text-align: center; font-family: 'Pacifico', cursive; font-size: 1.4rem; color: #d81b60; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: opacity 0.6s ease; opacity: 0; }
+    #gift-box { width: 100px; height: 100px; margin: 20px auto; background: url('giftbox.jpg') no-repeat center center; background-size: cover; animation: bounce 2s infinite; }
+    #surprise-message { display: none; margin-top: 20px; background: #fff; border-radius: 15px; padding: 15px; max-height: 250px; overflow-y: auto; text-align: center; font-family: 'Pacifico', cursive; font-size: 1.3rem; color: #d81b60; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: opacity 0.6s ease; opacity: 0; }
     #surprise-message.show { opacity: 1; }
     .footer { text-align: center; padding: 20px; color: #6a1b9a; font-size: 1rem; }
-    @media (max-width: 640px) { header h1 { font-size: 2rem; } .caption { font-size: 1rem; } .birthday-message, #surprise-message { font-size: 1rem; padding: 15px; } }
+    @media (max-width: 640px) { header h1 { font-size: 2rem; } .caption { font-size: 0.9rem; } .birthday-message, #surprise-message { font-size: 1rem; padding: 10px; } }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-20px); } 60% { transform: translateY(-10px); } }
+    @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-15px); } 60% { transform: translateY(-7px); } }
   </style>
 </head>
 <body>
-  <audio id="bg-music" loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-buddy.mp3" type="audio/mpeg">
+  <audio id="bg-music" autoplay loop>
+    <source src="https://www2.cs.uic.edu/~i101/SoundFiles/HappyBirthday.mid" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
@@ -110,9 +110,9 @@
     May Allah grant you success in this world and the Hereafter.<br><br>
     My friend, I’m sorry for everything that happened.
     And thank you again for understanding me in my hard times.
-    I know it's not easy for you to understand me everytime and say "it's alright", my actions might be hurtful but you always understood me, I appreciate that. It must be difficult for you to let go of things…
-    This flexibility stands you out.
-    Again, Happy Birthday Marsha.
+    I know it's not easy for you to understand me every time and say "it's alright", my actions might be hurtful but you always understood me, I appreciate that. It must be difficult for you to let go things..
+    This flexibility stands you out.<br><br>
+    Again, Happy Birthday Marsha.<br>
     Love you, sis. ❤
   </section>
 
